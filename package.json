@@ -4,8 +4,8 @@
   "license": "MIT",
   "description": "Recipes",
   "scripts": {
-    "start": "parcel src/index.html",
-    "test": "jest"
+    "start": "parcel ./src/index.html",
+    "build": "parcel build ./src/index.html"
   },
   "prettier": {
     "singleQuote": true
