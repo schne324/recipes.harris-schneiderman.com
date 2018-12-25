@@ -1,0 +1,53 @@
+{
+  "name": "recipes.harris-schneiderman.com",
+  "version": "0.0.0",
+  "license": "MIT",
+  "description": "Recipes",
+  "scripts": {
+    "start": "parcel src/index.html",
+    "test": "jest"
+  },
+  "prettier": {
+    "singleQuote": true
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "prettier --write",
+      "git add"
+    ],
+    "*.{json,css,md}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "dependencies": {
+    "@material-ui/core": "^3.0.0",
+    "@material-ui/icons": "^3.0.1",
+    "classnames": "^2.2.6",
+    "prop-types": "^15.6.2",
+    "react": "^16.3.0",
+    "react-dom": "^16.3.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^10.0.1",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "eslint": "^5.11.0",
+    "eslint-config-prettier": "^3.3.0",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-react": "^7.11.1",
+    "husky": "^1.2.1",
+    "jest": "^23.6.0",
+    "lint-staged": "^8.1.0",
+    "parcel-bundler": "^1.11.0",
+    "prettier": "^1.15.3"
+  }
+}
