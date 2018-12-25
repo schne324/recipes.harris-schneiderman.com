@@ -13,7 +13,7 @@ export default [
       { amount: '4', value: 'egg whites' },
       { amount: '1/8 t', value: 'ground nutmeg' },
       { amount: 'to taste', value: 'salt + freshly ground pepper' },
-      { amount: '4 cups', value: 'flout' },
+      { amount: '4 cups', value: 'flour' },
       { value: 'fine dry breadcrumbs' }
     ],
     directions: [
