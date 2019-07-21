@@ -19,6 +19,7 @@ import Grid from '@material-ui/core/Grid';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
+import fallbackImg from '../img/fallback.png';
 import recipes from '../recipes';
 
 const styles = theme => ({
@@ -62,6 +63,9 @@ const styles = theme => ({
   },
   cardContent: {
     flexGrow: 1
+  },
+  cardItem: {
+    padding: '3px 0'
   },
   footer: {
     backgroundColor: theme.palette.background.paper,
@@ -134,7 +138,7 @@ class App extends Component {
           <Toolbar>
             <CameraIcon className={classes.icon} />
             <Typography variant="h6" color="inherit" noWrap>
-              {`Nonna's Recipes`}
+              Recipes
             </Typography>
           </Toolbar>
         </AppBar>
@@ -148,7 +152,7 @@ class App extends Component {
                 color="textPrimary"
                 gutterBottom
               >
-                {`Nonna's Recipes`}
+                Recipes
               </Typography>
               <Typography
                 variant="h6"
@@ -156,8 +160,7 @@ class App extends Component {
                 color="textSecondary"
                 paragraph
               >
-                All of these recipes were created by my wonderful Nonna, Yvette
-                Pivetta.
+                This site is dedicated my wonderful Nonna, Yvette Pivetta.
               </Typography>
               <div className={classes.heroButtons}>
                 <Grid container spacing={16} justify="center">
@@ -181,7 +184,7 @@ class App extends Component {
                   <Card className={classes.card}>
                     <CardMedia
                       className={classes.cardMedia}
-                      image={card.image}
+                      image={card.image || fallbackImg}
                       title={card.name}
                     />
                     <CardContent className={classes.cardContent}>
@@ -217,9 +220,14 @@ class App extends Component {
                       </Typography>
                       <ul>
                         {card.ingredients.map((ingredients, i) => (
-                          <li key={`${card.name}-${cardIndex}-${i}`}>
+                          <li
+                            className={classes.cardItem}
+                            key={`${card.name}-${cardIndex}-${i}`}
+                          >
                             {ingredients.amount && (
-                              <strong>{ingredients.amount}: </strong>
+                              <strong>
+                                <em>{ingredients.amount}</em>{' '}
+                              </strong>
                             )}
                             <span>{ingredients.value}</span>
                           </li>
@@ -230,7 +238,12 @@ class App extends Component {
                       </Typography>
                       <ol>
                         {card.directions.map((d, i) => (
-                          <li key={`dir-${card.name}-${i}`}>{d}</li>
+                          <li
+                            className={classes.cardItem}
+                            key={`dir-${card.name}-${i}`}
+                          >
+                            {d}
+                          </li>
                         ))}
                       </ol>
                     </DialogContent>
