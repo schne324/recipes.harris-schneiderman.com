@@ -117,6 +117,12 @@ const DialogActions = withStyles(theme => ({
     padding: theme.spacing.unit
   }
 }))(MuiDialogActions);
+const getPath = n =>
+  n
+    .replace(/[^\w\s]/gi, '')
+    .split(' ')
+    .join('-')
+    .toLowerCase();
 
 class App extends Component {
   static propTypes = {
@@ -125,12 +131,36 @@ class App extends Component {
 
   state = { open: null };
 
-  dialogOpen = n => this.setState({ open: n });
-  dialogClose = () => this.setState({ open: null });
+  componentDidMount() {
+    if (location.pathname === '/') {
+      return;
+    }
+
+    const initiallyOpen = recipes.find(r => {
+      return `/${getPath(r.name)}` === location.pathname;
+    });
+
+    if (!initiallyOpen) {
+      return;
+    }
+
+    this.setState({
+      open: initiallyOpen.name
+    });
+  }
+
+  dialogOpen = n => {
+    history.pushState({}, n, getPath(n));
+    this.setState({ open: n });
+  };
+
+  dialogClose = () => {
+    this.setState({ open: null });
+    history.pushState({}, '', '/');
+  };
 
   render() {
     const { classes } = this.props;
-
     return (
       <Fragment>
         <CssBaseline />
@@ -191,6 +221,11 @@ class App extends Component {
                       <Typography gutterBottom variant="h5" component="h2">
                         {card.name}
                       </Typography>
+                      {card.type && (
+                        <p>
+                          <em>{card.type}</em>
+                        </p>
+                      )}
                       <Typography>{card.description}</Typography>
                     </CardContent>
                     <CardActions>
@@ -219,17 +254,23 @@ class App extends Component {
                         Ingredients
                       </Typography>
                       <ul>
-                        {card.ingredients.map((ingredients, i) => (
+                        {card.ingredients.map((ingredient, i) => (
                           <li
                             className={classes.cardItem}
                             key={`${card.name}-${cardIndex}-${i}`}
                           >
-                            {ingredients.amount && (
-                              <strong>
-                                <em>{ingredients.amount}</em>{' '}
-                              </strong>
+                            {typeof ingredient === 'string' ? (
+                              ingredient
+                            ) : (
+                              <Fragment>
+                                {ingredient.amount && (
+                                  <strong>
+                                    <em>{ingredient.amount}</em>{' '}
+                                  </strong>
+                                )}
+                                <span>{ingredient.value}</span>
+                              </Fragment>
                             )}
-                            <span>{ingredients.value}</span>
                           </li>
                         ))}
                       </ul>
@@ -268,7 +309,7 @@ class App extends Component {
             color="textSecondary"
             component="p"
           >
-            Go cook this shit, it is <strong>really fucking good!</strong>
+            Go cook this shit
           </Typography>
         </footer>
       </Fragment>

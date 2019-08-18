@@ -53,7 +53,8 @@ export default [
     ]
   },
   {
-    name: 'Pressure cooker beef tacos',
+    name: 'Beef tacos',
+    type: 'presure cooker',
     description: 'Simple classic beef tacos',
     ingredients: [
       { amount: '1 Tablespoon', value: 'Extra Virgin Olive Oil Extra Virgin' },
@@ -87,7 +88,8 @@ export default [
     ]
   },
   {
-    name: 'Pressure cooker chili',
+    name: 'Chili',
+    type: 'presure cooker',
     description: 'Classic beef chili',
     ingredients: [
       { amount: '1', value: 'sweet onion, chopped' },
@@ -135,7 +137,8 @@ export default [
     ]
   },
   {
-    name: 'Shredded chicken tacos (pressure cooker)',
+    name: 'Shredded chicken tacos',
+    type: 'presure cooker',
     description: 'Citrusy awesome shredded chicken tacos',
     ingredients: [
       { amount: '1 tbsp.', value: 'canola, vegetable or avocado oil' },
@@ -195,6 +198,29 @@ export default [
       'Heat the oil in a large pot over medium low heat.Add the onions and saute for a few minutes until the onions are fragrant and softened.Add the chicken and curry paste; saute for 3 - 5 minutes.Add the potatoes and stir to coat with the curry paste.',
       'Add the coconut cream and 1/2 cup water to the pot – simmer for 20-30 minutes or until the chicken and potatoes are fully cooked, adding more water depending on the consistency you want for the sauce.',
       'Stir in the fish sauce and brown sugar to really take it up a notch.Seriously – so good.Serve over rice.'
+    ]
+  },
+  {
+    name: 'Peanut chicken',
+    type: 'presure cooker',
+    ingredients: [
+      '1 ½  lbs chicken breast, cut into 1 inch cubes, sprinkled with pinch of salt',
+      '3 fat cloves garlic, rough chopped',
+      '1 tablespoon fresh ginger, chopped(or use ginger paste)',
+      '1 teaspoon oil',
+      '1  x 13.5 ounce can coconut milk(liquid and solids)',
+      '3 tablespoons soy sauce(or  use GF liquid amino acids)',
+      '3 tablespoons honey(or coconut sugar or brown sugar)',
+      '2 tablespoons fresh lime juice, more to taste',
+      '1 tablespoon chili garlic paste(or sriracha, or sambal olek)',
+      '½ cup peanut butter(or sub almond butter)'
+    ],
+    directions: [
+      'Cut the chicken into 1 inch cubes, sprinkle with salt and set aside.',
+      'If using an Instant Pot, set it to the sauté function, and sauté the ginger and garlic in a teaspoon of oil for 1-2 minutes, until fragrant. Add the coconut milk, soy sauce, honey, lime juice, chili paste and the chicken, everything except the peanut butter in the pot, and stir.  Drop the peanut butter in spoonfuls over top of the chicken (don’t stir it in).',
+      'Set to HIGH Pressure, for 9 minutes. Naturally release. See notes. (If using thigh meat pressure cook for 12 minutes.)',
+      'Once chicken is done cooking, taste a spoonful of the sauce. Adjust salt, lime, sweetness and spice level according to your taste. Some of you will want it sweeter. I usually add  more chili paste and lime. If the sauce seems too thin, reduce a bit using the sauté function ( while constantly stirring, to prevent burning the bottom). See notes.',
+      'Serve over a bed of rice.'
     ]
   }
 ];
