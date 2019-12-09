@@ -1,12 +1,12 @@
 import croquettes from './img/croquettes.png';
 import carbonara from './img/carbonara.jpg';
+import peanutChicken from './img/peanut-chicken.jpg';
 
 export default [
   {
     name: "Nonna's Croquettes",
     image: croquettes,
-    description:
-      "Nonna's potato croquettes (my absolute favorite ever since I was little!)",
+    description: "Nonna's potato croquettes",
     ingredients: [
       { amount: '2 lbs', value: 'old potatoes' },
       { amount: '4', value: 'egg yolks' },
@@ -33,6 +33,7 @@ export default [
   {
     name: "Nonna's Carbonara",
     image: carbonara,
+    tags: ['italian'],
     description:
       "Nonna's carbonara with bacon. So simple, so easy, so delicous.",
     ingredients: [
@@ -54,7 +55,7 @@ export default [
   },
   {
     name: 'Beef tacos',
-    type: 'presure cooker',
+    tags: ['pressure cooker', 'mexican'],
     description: 'Simple classic beef tacos',
     ingredients: [
       { amount: '1 Tablespoon', value: 'Extra Virgin Olive Oil Extra Virgin' },
@@ -89,7 +90,7 @@ export default [
   },
   {
     name: 'Chili',
-    type: 'presure cooker',
+    tags: ['pressure cooker', 'american'],
     description: 'Classic beef chili',
     ingredients: [
       { amount: '1', value: 'sweet onion, chopped' },
@@ -121,6 +122,37 @@ export default [
     ]
   },
   {
+    name: 'Chili Meatballs',
+    description: "Pete's chili balls",
+    tags: ['american'],
+    ingredients: [
+      { type: 'heading', value: 'Meatballs' },
+      { amount: '1/2 lb', value: 'ground beef' },
+      { amount: '1/2 lb', value: 'ground lean pork' },
+      { amount: '1', value: 'egg' },
+      { amount: '1/4 cup', value: 'milk' },
+      { amount: '1/3 cup', value: 'rice (uncooked)' },
+      { amount: '1/4 cup', value: 'chopped onion' },
+      { amount: '1/2 teaspoon', value: 'salt' },
+      { amount: '1 1/2 teaspoon', value: 'chili powder' },
+      { type: 'heading', value: 'Sauce' },
+      { amount: '1 1-lb can (two cups)', value: 'canned tomatoes' },
+      { amount: '1/4 cup', value: 'chopped onion' },
+      { amount: '1/2 teaspoon', value: 'salt' },
+      { amount: '1 1/2 teaspoon', value: 'chili powder' },
+      { amount: '1/2 teaspoon', value: 'worcestershire sauce' }
+    ],
+    directions: [
+      'Mix meats: Add egg, milk, rice, chopped onion, salt, and chili powder',
+      'Form mixture into meatballs of desired size',
+      'Brown meatballs in fat',
+      'Set meatballs aside...',
+      'Combine remaining ingredients in pot and heat to boil',
+      'Drop meatballs in',
+      'Reduce heat, cover and slowly cook for 1 hour'
+    ]
+  },
+  {
     name: 'Garlic sauce',
     description: 'Bomb ass garlic sauce for kebabs/gyros/whatever',
     ingredients: [
@@ -138,7 +170,7 @@ export default [
   },
   {
     name: 'Shredded chicken tacos',
-    type: 'presure cooker',
+    tags: ['pressure cooker', 'mexican'],
     description: 'Citrusy awesome shredded chicken tacos',
     ingredients: [
       { amount: '1 tbsp.', value: 'canola, vegetable or avocado oil' },
@@ -173,6 +205,7 @@ export default [
   },
   {
     name: 'Yellow curry',
+    tags: ['asian'],
     ingredients: [
       { amount: '1 tablespoon', value: 'oil' },
       { amount: '1 / 2', value: 'a yellow onion, sliced thinly' },
@@ -202,7 +235,8 @@ export default [
   },
   {
     name: 'Peanut chicken',
-    type: 'presure cooker',
+    tags: ['pressure cooker', 'asian'],
+    image: peanutChicken,
     ingredients: [
       '1 ½  lbs chicken breast, cut into 1 inch cubes, sprinkled with pinch of salt',
       '3 fat cloves garlic, rough chopped',

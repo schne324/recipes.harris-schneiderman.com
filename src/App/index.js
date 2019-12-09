@@ -10,6 +10,7 @@ import MuiDialogActions from '@material-ui/core/DialogActions';
 import IconButton from '@material-ui/core/IconButton';
 import CloseIcon from '@material-ui/icons/Close';
 import CameraIcon from '@material-ui/icons/Restaurant';
+import Chip from '@material-ui/core/Chip';
 import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
@@ -21,6 +22,7 @@ import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
 import fallbackImg from '../img/fallback.png';
 import recipes from '../recipes';
+import './index.css';
 
 const styles = theme => ({
   appBar: {
@@ -221,12 +223,16 @@ class App extends Component {
                       <Typography gutterBottom variant="h5" component="h2">
                         {card.name}
                       </Typography>
-                      {card.type && (
-                        <p>
-                          <em>{card.type}</em>
-                        </p>
-                      )}
                       <Typography>{card.description}</Typography>
+                      {card.tags && card.tags.length && (
+                        <ul className="Tags" aria-label="Tags">
+                          {card.tags.map(t => (
+                            <li key={t}>
+                              <Chip label={t} />
+                            </li>
+                          ))}
+                        </ul>
+                      )}
                     </CardContent>
                     <CardActions>
                       <Button
@@ -246,34 +252,64 @@ class App extends Component {
                     <DialogTitle
                       id="customized-dialog-title"
                       onClose={this.dialogClose}
+                      component="h4"
                     >
                       {card.name}
                     </DialogTitle>
                     <DialogContent>
-                      <Typography gutterBottom variant="h6" component="h6">
+                      <Typography gutterBottom variant="h5" component="h5">
                         Ingredients
                       </Typography>
-                      <ul>
-                        {card.ingredients.map((ingredient, i) => (
-                          <li
-                            className={classes.cardItem}
-                            key={`${card.name}-${cardIndex}-${i}`}
-                          >
-                            {typeof ingredient === 'string' ? (
-                              ingredient
-                            ) : (
-                              <Fragment>
-                                {ingredient.amount && (
-                                  <strong>
-                                    <em>{ingredient.amount}</em>{' '}
-                                  </strong>
+                      {card.ingredients
+                        .reduce(
+                          (groups, ingredient) => {
+                            if (ingredient.type === 'heading') {
+                              groups.push([ingredient]);
+                            } else {
+                              groups[groups.length - 1].push(ingredient);
+                            }
+
+                            return groups;
+                          },
+                          [[]]
+                        )
+                        .filter(g => g.length)
+                        .map((groupItems, i) => {
+                          const hasHeading = groupItems[0].type === 'heading';
+                          const [heading, ...other] = groupItems;
+                          return (
+                            <div key={i}>
+                              {hasHeading && (
+                                <Typography variant="subtitle1" component="h6">
+                                  {heading.value}
+                                </Typography>
+                              )}
+                              <ul>
+                                {(hasHeading ? other : groupItems).map(
+                                  (ingredient, index) => (
+                                    <li
+                                      className={classes.cardItem}
+                                      key={`${card.name}-${cardIndex}-${index}`}
+                                    >
+                                      {typeof ingredient === 'string' ? (
+                                        ingredient
+                                      ) : (
+                                        <Fragment>
+                                          {ingredient.amount && (
+                                            <strong>
+                                              <em>{ingredient.amount}</em>{' '}
+                                            </strong>
+                                          )}
+                                          <span>{ingredient.value}</span>
+                                        </Fragment>
+                                      )}
+                                    </li>
+                                  )
                                 )}
-                                <span>{ingredient.value}</span>
-                              </Fragment>
-                            )}
-                          </li>
-                        ))}
-                      </ul>
+                              </ul>
+                            </div>
+                          );
+                        })}
                       <Typography gutterBottom variant="h6" component="h6">
                         Directions
                       </Typography>
