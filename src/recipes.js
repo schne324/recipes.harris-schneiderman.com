@@ -6,6 +6,7 @@ export default [
   {
     name: "Nonna's Croquettes",
     image: croquettes,
+    tags: ['italian'],
     description: "Nonna's potato croquettes",
     ingredients: [
       { amount: '2 lbs', value: 'old potatoes' },
@@ -25,7 +26,7 @@ export default [
       'Add egg yolks, salt, pepper, and nutmeg',
       'Mix well, until smooth',
       'Form oblong shaped pieces',
-      'Dip each in flour, then eggwhites, then roll in breadcrumbs',
+      'Dip each in flour, then egg whites, then roll in breadcrumbs',
       'Fry at 375&deg;',
       'Serve hot (eat before Harris eats all of them)'
     ]
@@ -54,7 +55,7 @@ export default [
     ]
   },
   {
-    name: 'Beef tacos',
+    name: 'Beef Tacos',
     tags: ['pressure cooker', 'mexican'],
     description: 'Simple classic beef tacos',
     ingredients: [
@@ -153,8 +154,9 @@ export default [
     ]
   },
   {
-    name: 'Garlic sauce',
+    name: 'Garlic Sauce',
     description: 'Bomb ass garlic sauce for kebabs/gyros/whatever',
+    tags: ['mediterranean'],
     ingredients: [
       { amount: '6ish', value: 'garlic cloves(just peel - no need to chop)' },
       { amount: '½ - 1', value: 'Lemon juice' },
@@ -169,7 +171,7 @@ export default [
     ]
   },
   {
-    name: 'Shredded chicken tacos',
+    name: 'Shredded Chicken Tacos',
     tags: ['pressure cooker', 'mexican'],
     description: 'Citrusy awesome shredded chicken tacos',
     ingredients: [
@@ -204,7 +206,7 @@ export default [
     ]
   },
   {
-    name: 'Yellow curry',
+    name: 'Yellow Curry',
     tags: ['asian'],
     ingredients: [
       { amount: '1 tablespoon', value: 'oil' },
@@ -234,7 +236,7 @@ export default [
     ]
   },
   {
-    name: 'Peanut chicken',
+    name: 'Peanut Chicken',
     tags: ['pressure cooker', 'asian'],
     image: peanutChicken,
     ingredients: [
@@ -255,6 +257,32 @@ export default [
       'Set to HIGH Pressure, for 9 minutes. Naturally release. See notes. (If using thigh meat pressure cook for 12 minutes.)',
       'Once chicken is done cooking, taste a spoonful of the sauce. Adjust salt, lime, sweetness and spice level according to your taste. Some of you will want it sweeter. I usually add  more chili paste and lime. If the sauce seems too thin, reduce a bit using the sauté function ( while constantly stirring, to prevent burning the bottom). See notes.',
       'Serve over a bed of rice.'
+    ]
+  },
+  {
+    name: 'Salsa Verde Chicken',
+    tags: ['pressure cooker', 'mexican'],
+    ingredients: ['3/4 cup onion', '1 cup salsa verde', '2lb chicken breast'],
+    directions: [
+      'Add the onion, salsa verde and chicken to the Instant Pot. Cook thawed chicken on high pressure for 12 minutes. (Cook frozen chicken on high pressure for 20 minutes.) Turn the pressure valve to "Vent" to release all of the pressure.',
+      'Remove the chicken breasts from the pot and place on a plate or cutting board. Shred the chicken using two forks',
+      'Remove 2/3 cup of liquid from the pot. (Reserve the liquid for cooking rice.) Return the shredded chicken to pot and stir until well combined. Top chicken with green onions'
+    ]
+  },
+  {
+    name: 'Honey Teriyaki Chicken',
+    tags: ['pressure cooker', 'asian'],
+    ingredients: [
+      '2/3 cup Teriyaki sauce',
+      '1 Tbsp. honey',
+      '1/4 cup chicken broth',
+      '2 lb chicken breasts',
+      'Green onions chopped'
+    ],
+    directions: [
+      'Add the Teriyaki sauce and honey to the Instant Pot and whisk until well combined. Add the chicken broth and chicken. Cook thawed chicken on high pressure for 12 minutes. (Cook frozen chicken on high pressure for 20 minutes.) Turn the pressure valve to "Vent" to release all of the pressure.',
+      'Remove the chicken breasts from the pot and place on a plate or cutting board. Shred the chicken using two forks.',
+      'Remove 1/2 cup of liquid from the pot. (Reserve the liquid for cooking rice.) Return the shredded chicken to pot and stir until well combined. Top chicken with green onions.'
     ]
   }
 ];
