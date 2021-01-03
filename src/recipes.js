@@ -171,6 +171,26 @@ export default [
     ]
   },
   {
+    name: 'Tzatziki Sauce',
+    description: 'Tzatziki sauce for gyros and gyro accessories (pita bread, veggies, etc). Lasts about 4-5 days in tightly sealed bowl (refridgerator)',
+    tags: ['greek'],
+    ingredients: [
+      { amount: '1 cup', value: 'Greek yogurt' },
+      { amount: '1 cup', value: 'Shredded english cucumber' },
+      { amount: '2', value: 'Garlic cloves' },
+      { amount: '1', value: 'lemon, zested + 1 tablespoon juice' },
+      { amount: '1 tablespoon', value: 'Olive oil' },
+      { amount: '1 tablespoon', value: 'Fresh chopped dill' },
+      { amount: '1/4 teaspoon', value: 'Salt' },
+      { amount: '1/4 teaspoon', value: 'Pepper' }
+    ],
+    directions: [
+      'Shred the cucumber with a cheese grater. Zest and juice the lemon. Then chop the dill and garlic.',
+      'Set out a medium-sized mixing bowl. Add the yogurt, shredded cucumber, lemon zest, 1 tablespoon lemon juice, chopped dill, garlic, salt, and pepper.',
+      'Mix well. Then salt and pepper as needed. You can also add additional lemon juice if you so desire.'
+    ]
+  },
+  {
     name: 'Shredded Chicken Tacos',
     tags: ['pressure cooker', 'mexican'],
     description: 'Citrusy awesome shredded chicken tacos',
