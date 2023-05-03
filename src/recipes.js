@@ -330,5 +330,38 @@ export default [
       'Remove the roast from the slow cooker, and shred the meat using two forks. Return the shredded pork to the slow cooker, and stir the meat into the juices.',
       'Spread the inside of both halves of hamburger buns with butter. Toast the buns, butter side down, in a skillet over medium heat until golden brown. Spoon pork into the toasted buns.'
     ]
+  },
+  {
+    name: 'Beef brisket',
+    tags: ['pressure cooker', 'bbq'],
+    ingredients: [
+      '1.5 - 2 pounds (766g) beef brisket (2 inches thick)',
+      '3 – 5 drops liquid smoke',
+      '2 tablespoons (26g) brown sugar',
+      '2 teaspoons (5g) chili powder',
+      '2 teaspoons (4g) black pepper',
+      '1 teaspoon (2.4g) onion powder',
+      '1 teaspoon (2.8g) garlic powder',
+      '1 teaspoon (3g) cinnamon powder',
+      '1 teaspoon (6g) coarse kosher salt',
+      '½ teaspoon (1g) cumin seed , ground',
+      '½ teaspoon (1g) fennel seed , ground',
+      '¼ teaspoon (0.5g) cayenne pepper',
+      '1 (205g) medium onion , sliced',
+      '3 garlic cloves , minced',
+      '1 cup (250ml) ketchup',
+      '½ cup (125ml) unsalted chicken stock or water',
+      '1 tablespoon (15ml) maple syrup',
+      '1 tablespoon (15ml) honey',
+      '2 tablespoons (30ml) apple cider vinegar',
+      '2 tablespoons (30ml) Dijon mustard',
+      '1 tablespoon (13g) brown sugar'
+    ],
+    directions: [
+      'Dry Rub Brisket: In a glass mixing bowl, mix dry rub ingredients together. Rub the dry rub mixture on the brisket, then let it marinate for at least 2 hours (preferably overnight, so the salt can penetrate into the meat).',
+      'Pressure Cook Beef Brisket: Add sliced onion, minced garlic, 1 tbsp (15ml) maple syrup, 1 tbsp (15ml) honey, 2 tbsp (30ml) apple cider vinegar, 3 - 5 drops liquid smoke, and ½ cup (125ml) unsalted chicken stock to Instant Pot. Mix well. Add marinated brisket in Instant Pot. Pressure Cook at High Pressure for 75 minute and Natural Release for 15 minutes. Remove the lid carefully.',
+      'Thicken Homemade BBQ Sauce: Carefully place cooked brisket on a chopping board and let it rest. If desired, use a fat separator to remove the oil from the BBQ sauce. Bring the BBQ sauce back to a simmer by pressing the "Cancel" button, then "Saute" button. Mix in 1 cup (250ml) ketchup, 2 tbsp (30g) Dijon mustard, and 1 tbsp (13g) brown sugar in Instant Pot. Let the BBQ sauce thicken by simmering for 8 - 15 minutes. Stir occasionally. Taste and adjust the seasoning with more salt if necessary.',
+      'Serve Instant Pot Brisket with Yummy BBQ Sauce: Generously brush the addictively yummy BBQ sauce all over the brisket. If desired, use a blowtorch or oven (broil) to slightly caramelize the BBQ sauce on the brisket. Slice your brisket against the grain to maximize tenderness. If you didnt marinate the brisket long enough, sprinkle some salt on the sliced briskets to season them better. Serve with the awesome BBQ sauce. Your delicious & beautiful BBQ Brisket is ready to serve!'
+    ]
   }
 ];
