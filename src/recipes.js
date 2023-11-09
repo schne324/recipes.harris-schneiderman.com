@@ -251,9 +251,9 @@ export default [
       { amount: 'cilantro and rice for serving' }
     ],
     directions: [
-      'Heat the oil in a large pot over medium low heat.Add the onions and saute for a few minutes until the onions are fragrant and softened.Add the chicken and curry paste; saute for 3 - 5 minutes.Add the potatoes and stir to coat with the curry paste.',
+      'Heat the oil in a large pot over medium low heat. Add the onions and saute for a few minutes until the onions are fragrant and softened.Add the chicken and curry paste; saute for 3 - 5 minutes. Add the potatoes and stir to coat with the curry paste.',
       'Add the coconut cream and 1/2 cup water to the pot – simmer for 20-30 minutes or until the chicken and potatoes are fully cooked, adding more water depending on the consistency you want for the sauce.',
-      'Stir in the fish sauce and brown sugar to really take it up a notch.Seriously – so good.Serve over rice.'
+      'Stir in the fish sauce and brown sugar to really take it up a notch.Seriously – so good. Serve over rice.'
     ]
   },
   {
