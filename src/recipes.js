@@ -39,7 +39,7 @@ export default [
     ingredients: [
       { amount: '1.5 lb', value: 'ground beef' },
       { amount: '3 tbsp', value: 'gochujang' },
-      { amount: '1 tsp', value: 'sesame oil },
+      { amount: '1 tsp', value: 'sesame oil' },
       { amount: '3 tbsp', value: 'soy sauce' },
       { amount: '3 tbsp', value: 'honey' },
       { amount: '4 tbsp', value: 'green onion sliced' },
