@@ -32,6 +32,31 @@ export default [
     ]
   },
   {
+    name: "Korean Beef",
+    tags: ['asian'],
+    description:
+      "Korean style ground beef and rice",
+    ingredients: [
+      { amount: '1.5 lb', value: 'ground beef' },
+      { amount: '3 tbsp', value: 'gochujang' },
+      { amount: '1 tsp', value: 'sesame oil' },
+      { amount: '3 tbsp', value: 'soy sauce' },
+      { amount: '3 tbsp', value: 'honey' },
+      { amount: '4 tbsp', value: 'green onion sliced' },
+      { amount: '2 tsp', value: 'ginger' },
+      { amount: '2 tsp', value: 'garlic' },
+      { amount: '1 handful', value: 'brown sugar' },
+      { amount: '3/4 cup', value: 'white rice' },
+      { amount: '(optional toppings)', value: 'spice mayo, eel sauce, sriracha' }
+    ],
+    directions: [
+      'Brown ground beef',
+      'Stir in all the ingredients',
+      'Garnish with green onions',
+      'Serve over rice'
+    ]
+  },
+  {
     name: "Nonna's Carbonara",
     image: carbonara,
     tags: ['italian'],
